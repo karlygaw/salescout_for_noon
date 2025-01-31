@@ -6,7 +6,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import ContactForm from "./ContactForm";
-import { Sparkles } from "lucide-react";
 
 export default function HeroSection() {
   const [videoStarted, setVideoStarted] = useState(false);
@@ -15,6 +14,11 @@ export default function HeroSection() {
     <section className="relative min-h-[90vh] pt-24 pb-20 container mx-auto px-4">
       <div className="grid lg:grid-cols-2 gap-8 items-center">
         <div>
+          <div className="relative mb-4">
+            <div className="absolute -top-12 left-0 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 text-white px-6 py-2 rounded-full transform -rotate-2 shadow-lg">
+              <span className="relative inline-block transform rotate-2">7 DAYS FREE TRIAL</span>
+            </div>
+          </div>
           <h1 className="text-5xl font-bold mb-6">
             Elevate your pricing strategy with Informed
             <span className="text-yellow-400">noon</span>
@@ -31,14 +35,6 @@ export default function HeroSection() {
                 <ContactForm />
               </DialogContent>
             </Dialog>
-
-            <div className="flex items-center gap-2 p-4 bg-primary/5 rounded-lg border border-primary/10">
-              <Sparkles className="h-5 w-5 text-yellow-400" />
-              <div>
-                <p className="font-medium">Be the first and best in offers list</p>
-                <p className="text-sm text-muted-foreground">Start your 7-day free trial today</p>
-              </div>
-            </div>
           </div>
         </div>
         <div className="flex justify-center relative">
