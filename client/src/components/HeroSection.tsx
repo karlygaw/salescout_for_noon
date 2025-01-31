@@ -16,7 +16,7 @@ export default function HeroSection() {
         <div>
           <div className="relative mb-4">
             <div className="absolute -top-12 left-0 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 text-white px-6 py-2 rounded-full transform -rotate-2 shadow-lg">
-              <span className="relative inline-block transform rotate-2">7 DAYS FREE TRIAL</span>
+              <span className="relative inline-block transform rotate-2">BE THE FIRST AND BEST IN OFFERS LIST</span>
             </div>
           </div>
           <h1 className="text-5xl font-bold mb-6">
