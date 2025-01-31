@@ -6,6 +6,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import ContactForm from "./ContactForm";
+import { Sparkles } from "lucide-react";
 
 export default function HeroSection() {
   const [videoStarted, setVideoStarted] = useState(false);
@@ -21,7 +22,7 @@ export default function HeroSection() {
           <p className="text-lg text-gray-600 mb-8">
             Repricing software that is powerful, not overpowering. Built for Professional Amazon and Walmart sellers.
           </p>
-          <div className="space-x-4">
+          <div className="space-y-6">
             <Dialog>
               <DialogTrigger asChild>
                 <Button size="lg">Contact Us</Button>
@@ -30,10 +31,23 @@ export default function HeroSection() {
                 <ContactForm />
               </DialogContent>
             </Dialog>
-            <Button variant="outline" size="lg">Learn More</Button>
+
+            <div className="flex items-center gap-2 p-4 bg-primary/5 rounded-lg border border-primary/10">
+              <Sparkles className="h-5 w-5 text-yellow-400" />
+              <div>
+                <p className="font-medium">Be the first and best in offers list</p>
+                <p className="text-sm text-muted-foreground">Start your 7-day free trial today</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center relative">
+          {/* Background Effects */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-r from-primary/30 to-yellow-400/30 rounded-full blur-3xl opacity-20" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-gradient-to-r from-yellow-400/30 to-primary/30 rounded-full blur-2xl opacity-20 animate-pulse" />
+          </div>
+
           <div className="relative w-[240px] h-[480px]">
             {/* iPhone Frame */}
             <div className="absolute inset-0 bg-black rounded-[3rem] shadow-xl">
@@ -50,12 +64,15 @@ export default function HeroSection() {
                     Click to Play Demo
                   </Button>
                 ) : (
-                  <iframe
-                    src="https://www.youtube.com/embed/your_video_id?autoplay=1"
-                    className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
+                  <video
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  >
+                    <source src="/demo.mp4" type="video/mp4" />
+                  </video>
                 )}
               </div>
             </div>
