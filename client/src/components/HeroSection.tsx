@@ -11,12 +11,12 @@ export default function HeroSection() {
   const [videoStarted, setVideoStarted] = useState(false);
 
   return (
-    <section className="relative min-h-[90vh] pt-16 pb-20 container mx-auto px-4">
+    <section className="relative min-h-[90vh] pt-24 pb-20 container mx-auto px-4">
       <div className="grid lg:grid-cols-2 gap-8 items-center">
         <div>
           <h1 className="text-5xl font-bold mb-6">
             Elevate your pricing strategy with Informed
-            <span className="text-yellow-400">Noon</span>
+            <span className="text-yellow-400">noon</span>
           </h1>
           <p className="text-lg text-gray-600 mb-8">
             Repricing software that is powerful, not overpowering. Built for Professional Amazon and Walmart sellers.
@@ -34,7 +34,7 @@ export default function HeroSection() {
           </div>
         </div>
         <div className="flex justify-center">
-          <div className="relative w-[280px] h-[560px]">
+          <div className="relative w-[240px] h-[480px]">
             {/* iPhone Frame */}
             <div className="absolute inset-0 bg-black rounded-[3rem] shadow-xl">
               {/* Notch */}
