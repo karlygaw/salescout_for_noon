@@ -11,8 +11,8 @@ export default function HeroSection() {
   const [videoStarted, setVideoStarted] = useState(false);
 
   return (
-    <section className="min-h-screen pt-16 container mx-auto px-4">
-      <div className="grid lg:grid-cols-2 gap-8 items-center h-[calc(100vh-4rem)]">
+    <section className="relative min-h-[90vh] pt-16 pb-20 container mx-auto px-4">
+      <div className="grid lg:grid-cols-2 gap-8 items-center">
         <div>
           <h1 className="text-5xl font-bold mb-6">
             Elevate your pricing strategy with Informed
@@ -34,7 +34,7 @@ export default function HeroSection() {
           </div>
         </div>
         <div className="flex justify-center">
-          <div className="relative w-[300px] h-[600px]">
+          <div className="relative w-[280px] h-[560px]">
             {/* iPhone Frame */}
             <div className="absolute inset-0 bg-black rounded-[3rem] shadow-xl">
               {/* Notch */}
